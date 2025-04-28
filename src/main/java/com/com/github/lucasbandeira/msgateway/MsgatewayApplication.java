@@ -19,6 +19,7 @@ public class MsgatewayApplication {
 	public RouteLocator routeLocator ( RouteLocatorBuilder builder ){
 		return builder.routes()
 				.route(routes->routes.path("/agent/**").uri("lb://msagent"))
+				.route(routes->routes.path("/hero/**").uri("lb://msmarvel"))
 				.build();
 	}
 
