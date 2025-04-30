@@ -20,6 +20,7 @@ public class MsgatewayApplication {
 		return builder.routes()
 				.route(routes->routes.path("/agent/**").uri("lb://msagent"))
 				.route(routes->routes.path("/hero/**").uri("lb://msmarvel"))
+				.route(routes->routes.path("/agent/hero/**").uri("lb://agent"))
 				.build();
 	}
 
